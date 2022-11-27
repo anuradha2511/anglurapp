@@ -14,9 +14,12 @@ export class ServersComponent {
   imgUrl = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png?20221110153201'
 
   serverCreationStatus : string = 'Server not created';
+  clickServer = false;
 
 
   serverName: string = 'codemind.com';
+  userName: string = 'Anuradha Patil';
+  btnClick:boolean = false;
 
   constructor() {
     setTimeout(()=>{
@@ -30,6 +33,10 @@ export class ServersComponent {
 
 onCreateServer(){
   this.serverCreationStatus = 'Server created';
+}
+
+onClickServer(){
+  this.userName = " ";
 }
 
 }

@@ -5,7 +5,7 @@
 <p> Server with Id {{serverId}} is {{getServerStatus()}} </p>
 
 
-<button [disabled]="!allowNewServer" (click)="onCreateServer()"> Add server </button>
+<button [disabled]="!allowNewServer" class="btn btn-primary" (click)="onCreateServer()"> Add server </button>
 
 <div>{{serverCreationStatus}}</div>
 
@@ -21,3 +21,18 @@
 </div>
 
 {{serverName}}
+
+
+<div class="two-way">
+<h4 >   Two-Way data binding Assignment </h4>
+
+<div>
+Enter User Name : <input type="text" [(ngModel)]="userName">
+</div>
+
+User Name: {{userName}}
+
+<br>
+
+<button [disabled]="!userName" class="btn btn-primary" (click)="onClickServer() " > Clear </button>
+</div>

@@ -1,0 +1,68 @@
+<div class="div">
+
+    <h3> Structural Directives Assignment </h3>
+    <h4> 1. *ngIf Example </h4>
+
+    <p *ngIf="isShow"> <input type="checkbox" class="custom-control-input" id="customCheck1"> Structural directives - *ngIf </p>
+    <p>The *ngIf allows to Add/Remove the DOM element. We can show or hide the element based on condition </p>
+
+</div>
+
+<div class="ngFor">
+    <h4> 2. *ngFor Example </h4>
+    <div>
+        <div class="title">
+            {{title}}
+        </div>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th> ID </th>
+                    <th> Course Name </th>
+                    <th> Fees </th>
+                    <th> Duration </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let courses of course">
+                    <td> {{courses.id}} </td>
+                    <td> {{courses.courseName}} </td>
+                    <td> {{courses.fees}} </td>
+                    <td> {{courses.duration}} </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<div class="ngSwitch">
+<h4> 3. *ngSwitch Example </h4>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <select class="form-control" (change)="getCourseName($event)">
+                <option value="Default">Select Course </option>
+                <option value="Angular"> Angular </option>
+                <option value="React"> React </option>
+                <option value=".Net"> .Net </option>
+                <option value="Data Science"> Data Science </option>
+                <option value="CPP"> CPP </option>
+            </select>
+        </div>
+        <div class="col-md-12" [ngSwitch]="selectedCourse">
+            <h2 class="text-success" *ngSwitchDefault> Select course </h2>
+            <h2 class="text-success" *ngSwitchCase="'Angular'"> Angular </h2>
+            <h2 class="text-success" *ngSwitchCase="'React'"> React </h2>
+            <h2 class="text-success" *ngSwitchCase="'.Net'"> .Net </h2>
+        <h2 class="text-success" *ngSwitchCase="'Data Science'"> Data Science </h2>
+        <h2 class="text-success" *ngSwitchCase="'CPP'"> CPP </h2>
+    </div>
+
+</div>
+</div>
+</div>
