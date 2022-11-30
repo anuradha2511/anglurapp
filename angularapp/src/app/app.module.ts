@@ -14,6 +14,7 @@ import { StructuraldirectivesComponent } from './structuraldirectives/structural
 import { NgswitchassignComponent } from './ngswitchassign/ngswitchassign.component';
 import { AttriComponent } from './attri/attri.component';
 import { CustdirDirective } from './custdir.directive';
+import { DemoComponent } from './demo/demo.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CustdirDirective } from './custdir.directive';
     StructuraldirectivesComponent,
     NgswitchassignComponent,
     AttriComponent,
-    CustdirDirective
+    CustdirDirective,
+    DemoComponent
   ],
   imports: [
     BrowserModule,

@@ -11,10 +11,20 @@
         'text-danger' : person.country === 'HK'
     }">
 
-    {{person.name}} ({{person.country}})
+        {{person.name}} ({{person.country}})
 
     </li>
-</ul> 
+</ul>
 
 <p> Normal para </p>
 <p appCustdir> Custom para </p>
+
+<div style="margin-left: 300px">
+<input type="text" name="" id="" #username >
+</div>
+<button (click)="show(username.value)"> Show</button>
+<div>
+    {{uname}}
+</div>
+
+

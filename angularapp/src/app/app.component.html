@@ -1,5 +1,5 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <div style="text-align:center">
+<!-- The content below is only a placeholder and can be replaced.
+<div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -19,11 +19,28 @@
   </li>
 </ul>
 
-<app-server> </app-server>
+<app-server> </app-server> -->
 
-<router-outlet></router-outlet> -->
+<router-outlet></router-outlet>
 
 <!-- <app-WarningAlert> </app-WarningAlert> -->
+
+<ul *ngFor="let f of foods"> 
+<li>
+  {{f}}
+</li>
+</ul>
+
+<div>
+<app-demo (foodevent)="getDataFromChild($event)"> </app-demo>
+</div>
+
+<!-- <div *ngFor="let e of  EmployeeRecords">
+<app-demo [employee]="e" (foodevent)="getDataFromChild($event)"> 
+</app-demo>
+</div> -->
+
+<!-- <button (click)="show()"> Click </button> -->
 
 <!-- <app-success-alert> </app-success-alert> -->
 <!-- <app-ngswitch> </app-ngswitch> -->
@@ -31,4 +48,5 @@
 <!-- <button type="button" class="btn btn-primary">Primary</button> -->
 <!-- <app-demodirectives> </app-demodirectives> -->
 <!-- <app-structuraldirectives> </app-structuraldirectives> -->
-<app-attri> </app-attri>
+<!-- <app-attri> </app-attri> -->
+  <!-- <app-success-alert [myinputMsg]="uname"> </app-success-alert>   -->

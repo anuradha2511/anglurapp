@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-success-alert',
@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuccessAlertComponent implements OnInit {
 
- 
+ @Input() myinputMsg: string;
   constructor() { }
 
   ngOnInit() {
+    console.log('from parent', this.myinputMsg);
+    
   }
 
 }

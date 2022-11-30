@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./attri.component.css']
 })
 export class AttriComponent implements OnInit {
-
+uname;
   colorVal = 'blue';
-  people:any[] = [
 
+  people:any[] = [
     {
       "name": "Jack",
       "country": "UK"
@@ -26,7 +26,7 @@ export class AttriComponent implements OnInit {
     },
     {
       "name": "coidemind",
-      "country": "Uk"
+      "country": "UK"
     },
     {
       "name": "Sumit",
@@ -37,5 +37,7 @@ export class AttriComponent implements OnInit {
 
   ngOnInit() {
   }
-
+show(value){
+  this.uname = value;
+}
 }
