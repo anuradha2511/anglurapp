@@ -6,8 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  public uid: number;
   title = 'angularapp';
   uname = "I am from success-alert component";
+
   EmployeeRecords: any = [
     {
       empName: 'Arnav', empCity:'Karad', empSalary: '300000'

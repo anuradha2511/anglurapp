@@ -15,6 +15,8 @@ import { NgswitchassignComponent } from './ngswitchassign/ngswitchassign.compone
 import { AttriComponent } from './attri/attri.component';
 import { CustdirDirective } from './custdir.directive';
 import { DemoComponent } from './demo/demo.component';
+import { HooksComponent } from './hooks/hooks.component';
+import { HooksAssignComponent } from './hooks-assign/hooks-assign.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { DemoComponent } from './demo/demo.component';
     NgswitchassignComponent,
     AttriComponent,
     CustdirDirective,
-    DemoComponent
+    DemoComponent,
+    HooksComponent,
+    HooksAssignComponent
   ],
   imports: [
     BrowserModule,
