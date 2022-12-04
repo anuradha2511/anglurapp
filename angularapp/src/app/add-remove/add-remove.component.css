@@ -1,0 +1,37 @@
+input {
+    size: 20px;
+    width: 250px;
+    margin-top: 10px;
+    margin-left: 200px;
+    
+}
+
+body{
+    background-image: url(src/assets/images/ecommerce.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+
+.table-div{
+    margin-top: 20px;
+    width: 40vw;
+    margin-left: 20vw;
+    text-align: center;
+    background-color: white;
+
+}
+
+.btn{
+    margin-left: 6vw;
+}
+
+h1{
+    color: rgb(119, 6, 85);
+    text-align: center;
+    text-shadow: 2px 3px 4px rgb(84, 82, 82);
+    padding-top: 30px;
+    text-decoration: underline;
+}
+

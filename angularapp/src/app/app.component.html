@@ -25,7 +25,8 @@
 
 <!-- <app-WarningAlert> </app-WarningAlert> -->
 
-<ul *ngFor="let f of foods"> 
+<!-- (child to parent - code) -->
+<!-- <ul *ngFor="let f of foods"> 
 <li>
   {{f}}
 </li>
@@ -33,7 +34,7 @@
 
 <div>
 <app-demo (foodevent)="getDataFromChild($event)"> </app-demo>
-</div>
+</div> -->
 
 <!-- <div *ngFor="let e of  EmployeeRecords">
 <app-demo [employee]="e" (foodevent)="getDataFromChild($event)"> 
@@ -51,11 +52,34 @@
 <!-- <app-attri> </app-attri> -->
   <!-- <app-success-alert [myinputMsg]="uname"> </app-success-alert>   -->
 
-  <select (change)="uid = sid.value" #sid>
+<!-- (ngOnChange - code) -->
+  <!-- <select (change)="uid = sid.value" #sid>
 <option selected disabled> No value selected </option>
 <option [value]="id" *ngFor="let id of [1,2,3,4]">
   {{id}}
 </option>
-  </select>
+  </select> -->
+
+<!-- ( ngOnChanges/ ngDoCheck - code) -->
+<!-- <div class="row" style="text-align:center;"> 
+  <div class="col-md-12">
+   <input type="text" placeholder="enter value" (blur)="handleData($event)">
+
+<p> Product Name: <input type="text" placeholder="Enter product name" [(ngModel)]="name"> </p>
+<p> Product Price: <input type="text" placeholder="Enter product price" [(ngModel)]="price"> </p>
+<button class="btn btn-primary" (click)="updateProduct()"> Update product </button>
+  <app-hooks [userid]="uid" [parentData]="data" [product]="product"> </app-hooks>
+</div>
+</div>
+ -->
+
+  <!-- <app-hooks [userid]="uid"> </app-hooks> -->
+
+
+  <!-- <app-dirassign> </app-dirassign> -->
+
+  <!-- <app-add-remove> </app-add-remove> -->
+
+  <app-practice> </app-practice>
   
-  <app-hooks [userid]="uid"> </app-hooks>
+

@@ -1,0 +1,38 @@
+<p>practice works!</p>
+<!--  Two way Databinding example -->
+<h3> {{title}}</h3>
+<input type="text" [(ngModel)]="name">
+
+<h3> {{name}}</h3>
+
+
+<!-- Templete Reference Variable example -->
+<h3>{{title1}}</h3>
+<input type="text" #box placeholder="Enter user name">
+<button (click)="getVal(box.value)"> Call Function </button>
+
+<!-- Toggle a div and Button Text on Button click  -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+
+            <!-- will create button with ternary operator and click function -->
+            <button (click)="onclick()" type="button" class="btn btn-danger">
+                {{ReadMore? "Read More": "Read Less"}}
+            </button>
+
+            <!-- Will create if condition my default it will b hide on click it will toggle -->
+            <ng-container *ngIf="visible">
+                <div class="bg-white shadow-sm p-3">
+                    <h4> Hello World </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit tempor pretium. Ut
+                        laoreet pharetra accumsan. Orci varius natoque penatibus et magnis dis parturient montes,
+                        nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed neque
+                        felis. Sed lobortis risus pharetra convallis euismod.
+                    </p>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

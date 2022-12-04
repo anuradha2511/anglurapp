@@ -17,6 +17,9 @@ import { CustdirDirective } from './custdir.directive';
 import { DemoComponent } from './demo/demo.component';
 import { HooksComponent } from './hooks/hooks.component';
 import { HooksAssignComponent } from './hooks-assign/hooks-assign.component';
+import { DirassignComponent } from './dirassign/dirassign.component';
+import { AddRemoveComponent } from './add-remove/add-remove.component';
+import { PracticeComponent } from './practice/practice.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { HooksAssignComponent } from './hooks-assign/hooks-assign.component';
     CustdirDirective,
     DemoComponent,
     HooksComponent,
-    HooksAssignComponent
+    HooksAssignComponent,
+    DirassignComponent,
+    AddRemoveComponent,
+    PracticeComponent
   ],
   imports: [
     BrowserModule,

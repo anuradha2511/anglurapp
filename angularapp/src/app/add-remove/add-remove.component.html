@@ -1,0 +1,42 @@
+<body>
+    <!-- <h3> Add or Remove Assignment </h3> -->
+    <h1> <i>Top 5 Indian E-commerce Sites </i> </h1>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <input #mywebsite type="text" class="form-control" [placeholder]="websiteName">
+            
+            <div class="btn">
+                <button (click)="onclick(mywebsite)" class="btn btn-primary mt-3"> Add </button>
+
+            </div>    
+
+<div class="table-div">
+            <table class="table table-bordered  mt-3">
+                <thead class="thead-light">
+                    <tr>
+                        <th> Sr.No </th>
+                        <th> Website </th>
+                        <th> Action </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let i of websitelist; index as websiteno">
+                        <td> {{websiteno + 1}}</td>
+                        <td> {{i}}</td>
+                        <td> 
+                            <button (click)="onremove(websiteno)" class="btn btn-danger mt-3">  Remove </button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>

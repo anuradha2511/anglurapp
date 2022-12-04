@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './models/product';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  data;
+  name: string;
+  price: number;
+  product: Product = new Product();
+
+
   public uid: number;
+  // public ubank: any;
   title = 'angularapp';
   uname = "I am from success-alert component";
 
@@ -30,5 +38,13 @@ export class AppComponent {
 console.log(value);
 this.foods.push(value);
 
-  }
+}
+handleData(value) {
+  this.data = value.target.value;
+}
+updateProduct(){
+  // this.product = new Product();
+  this.product.name = this.name;
+  this.product.price = this.price;
+}
 }
