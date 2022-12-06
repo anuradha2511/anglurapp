@@ -14,7 +14,7 @@ getVal(item:any){
   console.log(item);
   
 }
-// readmore variable, its true than read more string will print
+// readmore variable, its true than read more string will print (toggle example)
 ReadMore:boolean = true;
 
 //hiding info box

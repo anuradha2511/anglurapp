@@ -61,25 +61,29 @@
   </select> -->
 
 <!-- ( ngOnChanges/ ngDoCheck - code) -->
-<!-- <div class="row" style="text-align:center;"> 
+<div class="row" style="text-align:center;"> 
   <div class="col-md-12">
    <input type="text" placeholder="enter value" (blur)="handleData($event)">
 
 <p> Product Name: <input type="text" placeholder="Enter product name" [(ngModel)]="name"> </p>
 <p> Product Price: <input type="text" placeholder="Enter product price" [(ngModel)]="price"> </p>
 <button class="btn btn-primary" (click)="updateProduct()"> Update product </button>
-  <app-hooks [userid]="uid" [parentData]="data" [product]="product"> </app-hooks>
+
+  <app-hooks [userid]="uid" [parentData]="data" [product]="product"> 
+    <h1 #child> This is child content coming from parent component</h1>
+  </app-hooks>
+
 </div>
 </div>
- -->
+
 
   <!-- <app-hooks [userid]="uid"> </app-hooks> -->
 
 
   <!-- <app-dirassign> </app-dirassign> -->
 
-  <!-- <app-add-remove> </app-add-remove> -->
+  <!-- <app-add-remove><h1> </h1> </app-add-remove> -->
 
-  <app-practice> </app-practice>
+  <!-- <app-practice> </app-practice> -->
   
 
