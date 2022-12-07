@@ -34,6 +34,12 @@ export class AppComponent {
 
   foods: string[] = [];
 
+  appchildExist: boolean = true;
+
+  destroy(){
+    this.appchildExist = false;
+  }
+
   getDataFromChild(value) {
 console.log(value);
 this.foods.push(value);

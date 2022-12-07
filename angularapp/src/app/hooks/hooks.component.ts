@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild, DoCheck, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild, DoCheck, ElementRef, Input, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { Product } from '../models/product';
 
 @Component({
@@ -6,7 +6,7 @@ import { Product } from '../models/product';
   templateUrl: './hooks.component.html',
   styleUrls: ['./hooks.component.css']
 })
-export class HooksComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
+export class HooksComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 @Input() userid: number;
 @Input() parentData: string;
 @Input() product: Product;
@@ -14,16 +14,25 @@ export class HooksComponent implements OnInit, OnChanges, DoCheck, AfterContentI
 @ViewChild("childhook", {static: false}) viewChild:ElementRef;
 pi;
 
+counter;
+num:number = 1;
+
   constructor() {
     this.pi = 3.14;
     console.log("constructor called");
 
 }
+  ngOnDestroy(): void {
+    console.log('ngOnDestroy called');
+    clearInterval(this.counter);
+  }
+  
   ngAfterViewChecked(): void {
 console.log('ngAfterViewChecked called' );
 this.viewChild.nativeElement.setAttribute('style', `color:${this.parentData}`)
 
   }
+
   ngAfterViewInit(): void {
     console.log('ngAfterViewInit called', this.viewChild);
     //this.viewChild.nativeElement.setAttribute('style', `color:${this.parentData}`)
@@ -74,7 +83,12 @@ this.viewChild.nativeElement.setAttribute('style', `color:${this.parentData}`)
 // hooks
   ngOnInit() {
     console.log(" ngOnInit called");
-    
+    this.counter = setInterval(() => {
+      this.num = this.num + 1 ;
+      console.log(this.num);
+      // api
+    }, 1000)
+  
   }
-
+  
 }
