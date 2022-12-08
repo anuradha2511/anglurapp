@@ -20,6 +20,9 @@ import { HooksAssignComponent } from './hooks-assign/hooks-assign.component';
 import { DirassignComponent } from './dirassign/dirassign.component';
 import { AddRemoveComponent } from './add-remove/add-remove.component';
 import { PracticeComponent } from './practice/practice.component';
+import { SimpletemplateformComponent } from './simpletemplateform/simpletemplateform.component';
+import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './parent/parent.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { PracticeComponent } from './practice/practice.component';
     HooksAssignComponent,
     DirassignComponent,
     AddRemoveComponent,
-    PracticeComponent
+    PracticeComponent,
+    SimpletemplateformComponent,
+    ChildComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule,

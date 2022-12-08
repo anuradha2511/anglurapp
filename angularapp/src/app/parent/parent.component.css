@@ -1,0 +1,14 @@
+
+.table{
+    margin-left: 50px;
+    width: 700px;
+    text-align: center;
+    /* background-color: aquamarine; */
+    background-image: url(src/assets/images/960x0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+height: 300px;
+color:rgb(7, 7, 8) ;
+font-weight: bolder;
+font-style: italic;
+}

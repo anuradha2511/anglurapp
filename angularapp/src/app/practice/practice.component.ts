@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./practice.component.css']
 })
 export class PracticeComponent implements OnInit {
+loginUser(item:any){
+  console.log(item);
+  
+}
+
 title = 'Two Way Binding ';
 name:any;
 
