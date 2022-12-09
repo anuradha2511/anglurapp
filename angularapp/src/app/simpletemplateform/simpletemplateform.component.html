@@ -2,27 +2,40 @@
     <div class="row justify-content-center">
         <div class="col-md-6 text-left rounded shadow py-5">
             <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+                <div ngModelGroup="userDetails" #userDetails="ngModelGroup">
                 <div class="form-group">
                     <label for="username"> Username</label>
-                    <input type="text" class="form-control" id="username" name="userName" placeholder="Enter User Name"  ngModel required>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter User Name"  [(ngModel)]="username" required>
+                <small *ngIf="username"> User name is :{{username}} </small>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email"  email name="email"  placeholder="Enter email"  ngModel required>
+                    <input type="email" class="form-control" id="email" #email="ngModel" email name="email"  placeholder="Enter email"  ngModel required>
+                <small class="text-danger" *ngIf="!email.valid && email.touched"> Enter valid email </small>
                 </div>
+                <small *ngIf="!userDetails.valid && userDetails.touched"> Please enter valid details</small>
+            </div>
 
                 <div class="form-group">
                     <label for="course"> Select Course></label>
-                    <select class="from-control" name="course" id="course" ngModel>
+                    <select class="from-control" name="course" id="course" [ngModel]="defaultValue">
                         <option value="Angular"> Angular </option>
                         <option value="HTML"> HTML</option>
                         <option value="JavaScript"> JavaScript </option>
                     </select>
                 </div>
 
-                <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary"> Submit</button>
-            </form>
+            <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary"> Submit</button>
+           <div class="row justify-content-center mt-2" *ngIf="submitted">
+            <div class=".col-md-6.rounded.shadow py-4">
+                <h2> Form data</h2>
+                <p> Username: <strong>{{employee.username}} </strong></p>
+                <p> Email: <strong>{{employee.email}} </strong></p>
+                <p> Course: <strong>{{employee.course}} </strong></p>
+            </div>
+           </div>
+        </form>
         </div>
     </div>
 </div>
