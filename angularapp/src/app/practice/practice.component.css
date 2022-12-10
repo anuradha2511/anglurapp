@@ -1,0 +1,39 @@
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+    box-shadow: 0 0 13px #ff000021;
+}
+
+.container{
+    background-image: url(src\assets\images\W1M7KR.jpg);
+/* background-color: #747d8c; */
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 600px; */
+    font-weight: bold;
+    margin: 20px;
+    
+}
+
+h2{
+    text-align: center;
+    font-style: italic;
+    color: rgb(190, 15, 88);
+}
+.form{
+    background-color: #747d8c;
+}
+
+.row{
+    /* background-image: url(src\assets\images\960x0.jpg); */
+    padding-top: 30px;
+    background-repeat: no-repeat;
+    /* text-align: center; */
+}
+
+.col-md-6{
+    /* background-image: url(src\assets\images\images.jpg); */
+    background-color:rgb(216, 193, 193);
+    width: 600px;
+
+}

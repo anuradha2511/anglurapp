@@ -1,28 +1,28 @@
-<p>practice works!</p>
+<!-- <p>practice works!</p> -->
 <!--  Two way Databinding example -->
-<h3> {{title}}</h3>
+<!-- <h3> {{title}}</h3>
 <input type="text" [(ngModel)]="name">
 
-<h3> {{name}}</h3>
+<h3> {{name}}</h3> -->
 
 
 <!-- Templete Reference Variable example -->
-<h3>{{title1}}</h3>
+<!-- <h3>{{title1}}</h3>
 <input type="text" #box placeholder="Enter user name">
-<button (click)="getVal(box.value)"> Call Function </button>
+<button (click)="getVal(box.value)"> Call Function </button> -->
 
 <!-- Toggle a div and Button Text on Button click  -->
-<div class="container mt-5">
+<!-- <div class="container mt-5">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12"> -->
 
-            <!-- will create button with ternary operator and click function -->
-            <button (click)="onclick()" type="button" class="btn btn-danger">
+<!-- will create button with ternary operator and click function -->
+<!-- <button (click)="onclick()" type="button" class="btn btn-danger">
                 {{ReadMore? "Read More": "Read Less"}}
-            </button>
+            </button> -->
 
-            <!-- Will create if condition my default it will b hide on click it will toggle -->
-            <ng-container *ngIf="visible">
+<!-- Will create if condition my default it will b hide on click it will toggle -->
+<!-- <ng-container *ngIf="visible">
                 <div class="bg-white shadow-sm p-3">
                     <h4> Hello World </h4>
                     <p>
@@ -35,7 +35,7 @@
             </ng-container>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- Template Driven Form -->
 <!-- <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
@@ -44,3 +44,91 @@
 <input type="text" name="password" placeholder="Enter password" ngModel>
  &nbsp; <button class="btn btn-success"> Login </button>
 </form> -->
+
+<div class="container">
+            <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <h2> Student Registration Form </h2>
+            <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+                <div ngModelGroup="studentDetails" #studentDetails="ngModelGroup">
+                <div class="form-group">
+                    <label for="name"> Name </label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter Full Name" ngModel
+                        required>
+                        <small *ngIf="name"> Student name is :{{name}} </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"> Email Address </label>
+                    <!-- <input type="email" class="form-control" id="email"  #email="ngModel" email name="email" placeholder="abc@gmail.com"
+                        ngModel required>
+                        <small class="text-danger" *ngIf="!email.valid && email.touched"> Enter valid email </small>
+                </div> -->
+                <input type="email" class="form-control" name="email" ngModel #email="ngModel" pattern="@codemindtechnology.com" required>
+                    <small *ngIf="email.touched">
+                        
+                        <p class="text-danger" *ngIf="email.errors?.pattern"> Please enter email @codemindtechnology.com</p><br>
+                    </small>
+                </div>
+                <!-- <small class="text-danger" *ngIf="!studentDetails.valid && studentDetails.touched"> Please enter valid details</small> -->
+                </div>
+
+                <div class="form-group">
+                    <label for="date"> Date of Birth </label>
+                    <input type="date" class="form-control" id="dob" name="dob"  ngModel required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender"> Gender: </label> &nbsp;
+                    <br>
+                    <input type="radio" id="male" value="male" name="gender" ngModel>
+                    <label for="male"> Male</label> &nbsp; &nbsp;
+                    <input type="radio" id="female" value="female" name="gender" ngModel>
+                    <label for="female"> Female </label>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address"  name="address" textarea rows="5" ngModel required>
+                  </div>
+                
+
+                <div class="form-group">
+                    <label for="mobile"> Mobile No: </label>
+                    <input type="number" class="form-control" id="number" name="mobileNo" placeholder="Mobile No" ngModel
+                        required maxlength="10" minlength="10">
+                </div>
+                <br>
+                <div class="form-group">
+                 <label for="course"> Select Department: </label> &nbsp;
+                <select class="from-control" name="department" id="department" [ngModel]="defaultValue">
+                 <option value="BCA"> BCA </option>
+                 <option value="BCS"> BCS</option>
+                 <option value="BBA"> BBA </option>
+                 <option value="MCA"> MCA </option>
+                 <option value="MBA"> MBA </option>
+              </select>
+            </div>
+
+                <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary"> Submit </button>
+          <br>
+          <br>
+          <div class="row justify-content-center mt-2" *ngIf="submitted">
+            <div class=".col-md-6.rounded.shadow py-4">
+                <h2> Student Information </h2>
+                <p> Name: <strong>{{stud.name}} </strong></p>
+                <p> Email: <strong>{{stud.email}} </strong></p>
+                <p> Date of Birth: <strong>{{stud.dob}} </strong></p>
+                <p> Gender: <strong>{{stud.gender}} </strong></p>
+                <p> Address: <strong>{{stud.address}} </strong></p>
+                <p> Mobile No.: <strong>{{stud.mobileNo}} </strong></p>
+                <p> Department: <strong>{{stud.department}} </strong></p>
+            </div>
+           </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
