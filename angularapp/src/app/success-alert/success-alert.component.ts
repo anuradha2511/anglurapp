@@ -6,6 +6,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./success-alert.component.css']
 })
 export class SuccessAlertComponent implements OnInit {
+  dis=true;
+  title:string = 'Data Binding';
+name:string='Anuradha Patil'
 
  @Input() myinputMsg: string;
   constructor() { }
@@ -14,5 +17,12 @@ export class SuccessAlertComponent implements OnInit {
     console.log('from parent', this.myinputMsg);
     
   }
+  change(){
+    this.title="Complete two Types Of Databindig"
+  }
+  delete(){
+    this.name=' ';
+  }
+  
 
 }

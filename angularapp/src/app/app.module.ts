@@ -7,7 +7,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { WarningAlertComponent } from './WarningAlert/WarningAlert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { StructuraldirectivesComponent } from './structuraldirectives/structuraldirectives.component';
@@ -23,6 +23,8 @@ import { PracticeComponent } from './practice/practice.component';
 import { SimpletemplateformComponent } from './simpletemplateform/simpletemplateform.component';
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { TemplateFormAssignComponent } from './template-form-assign/template-form-assign.component';
 
 @NgModule({
   declarations: [
@@ -45,12 +47,15 @@ import { ParentComponent } from './parent/parent.component';
     PracticeComponent,
     SimpletemplateformComponent,
     ChildComponent,
-    ParentComponent
+    ParentComponent,
+    ReactiveformComponent,
+    TemplateFormAssignComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

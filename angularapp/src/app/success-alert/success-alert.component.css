@@ -1,6 +1,35 @@
-h2{
+/* h2{
     background-color: rgb(167, 237, 202);
     text-align: center;
     border: 1px solid rgb(108, 105, 105);
     padding: 20px;
+} */
+
+
+division{
+    margin-left: 400px;
+  /* background-image:url(src/assets/images/images.jpeg) ; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 600px;
+border:1px solid rgb(3, 40, 109);
+padding: 50px;
+}
+.tit{
+    background-color: rgb(210, 210, 224);
+color: crimson;
+}
+.enter{
+    color: crimson;
+}
+h2{
+    color: darkred;
+    font-family: serif;
+}
+.inp{
+    background-color: chocolate;
+}
+.name1{
+    color: rgb(22, 3, 22);
 }

@@ -1,2 +1,28 @@
 <h2> You are so successful! </h2>
 
+
+<p>Databinding</p>
+<div class="division">
+    <div>
+        <h2 class="tit">
+        {{title}}
+    </h2>
+</div>
+ 
+    <div>
+        <h2>Property Binding:</h2>
+        <button [disabled]="!dis">Click</button>
+    </div>
+    <div>
+        <h2>Event  Binding:</h2>
+        <button class="btn btn-danger" (click)="change()">Click ME to change title</button>
+    </div>
+    <div>
+        <h2>Two Way Data Binding:</h2>
+        <h3 class="enter">Enter Name:<input class="inp"  type="text" [(ngModel)]="name" placeholder="Enter User name"></h3>
+        <h3>User Name Is:<h4 class="name">{{name}}</h4></h3>
+        <button class="btn btn-danger" (click)="delete()">Clear</button>
+    </div>
+</div>
+
+

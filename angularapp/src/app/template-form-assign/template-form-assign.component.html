@@ -1,0 +1,60 @@
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12 text-left rounded shadow py-5">
+            <h2> Assignment for Template Forms </h2>
+
+        <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+          <div ngModelGroup="userDetails" #userDetails="ngModelGroup">
+            <div class="form-group">
+                <label for="username"> Username</label>
+                <input type="text" class="form-control" id="username" #username="ngModel" name="username" placeholder="Enter User Name"  ngModel required>
+            <small class="text-danger" *ngIf="!username.valid && username.touched"> Enter user name  </small>
+            </div>
+<br>
+<div class="form-group">
+    <label for="email"> Email Address </label>
+    <input type="email" class="form-control" name="email" id="email"  #email="ngModel" email placeholder="abc@gmail.com" ngModel required>
+    <small class="text-danger" *ngIf="!email.valid && email.touched"> Please enter valid email</small>
+</div>
+<br>
+
+<div class="form-group">
+    <label for="select"> Select Subscriptions </label>
+    <select class="form-control" id="subscription" name="subscription" [ngModel]="defaultValue" required>
+        <option value="Basic"> Basic </option>
+        <option value="Advanced"> Advanced </option>
+        <option value="Pro"> Pro </option>
+  </select>
+</div>
+<br> 
+
+<div class="form-group">
+<label for="password"> Password </label>
+<input type="password" class="form-control" id="password" name="password"  #password="ngModel" placeholder="Please enter password" ngModel required>
+<small class="text-danger" *ngIf="!password.valid && password.touched" >Password should not be empty</small>
+</div>
+
+<br>
+<button type="submit" [disabled]="!myForm.valid" class="btn btn-primary" > Submit </button>
+<br>
+             <small class="text-danger" *ngIf="!userDetails.valid && userDetails.touched"> Please enter valid details</small>
+
+          </div>
+
+          <div class="row justify-content-left mt-2" *ngIf="submitted">
+            <div class=".col-md-6.rounded.shadow py-4">
+                <h1> Form data</h1>
+                <p> Username: <strong>{{emp.username}} </strong></p>
+                <p> Email: <strong>{{emp.email}} </strong></p>
+                <p> Subscription: <strong>{{emp.subscription}} </strong></p>
+                <p> Password: <strong> {{emp.password}}</strong></p>
+            </div>
+           </div>
+</form>
+</div>
+</div>
+</div>
+
+</body>
+

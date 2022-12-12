@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HooksAssignComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log('Constructor called');
+    
+   }
 
   ngOnInit() {
   }
