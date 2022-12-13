@@ -24,7 +24,7 @@ this.emp.email = form.value.userDetails.email;
 this.emp.subscription = form.value.userDetails.subscription;
 this.emp.password = form.value.userDetails.password;
 
-console.log(form.controls);
+this.saveEmployeeData(this.emp)
 
   }
   saveEmployeeData(emp:Employee1){
