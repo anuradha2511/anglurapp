@@ -36,7 +36,9 @@
 </div>
 
 <br>
-<button type="submit" [disabled]="!myForm.valid" class="btn btn-primary" > Submit </button>
+<button type="submit" [disabled]="!myForm.valid" class="btn btn-primary" > Submit </button> &nbsp; &nbsp; &nbsp;
+<button class="btn btn-danger" (click)="reset()"> Clear </button>
+
 <br>
              <small class="text-danger" *ngIf="!userDetails.valid && userDetails.touched"> Please enter valid details</small>
 

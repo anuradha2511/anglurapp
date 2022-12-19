@@ -1,0 +1,47 @@
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+    box-shadow: 0 0 20px #ff000021;
+}
+
+body {
+    background-image: url(src\assets\images\pngtree-the-shadow-from-leaves-on-white-wall-image_679090.jpg);
+    /* background-color: rgb(99, 126, 207); */
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.col-md-12 {
+    background-color: rgb(235, 226, 231);
+    opacity: 0.7;
+}
+
+label {
+    color: black;
+    font-weight: bold;
+}
+
+small {
+    font-weight: 600;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(48, 36, 152);
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
+
+h5 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: rgb(166, 22, 101);
+    font-size: larger;
+}
+
+input{
+    font-weight: 450;
+}

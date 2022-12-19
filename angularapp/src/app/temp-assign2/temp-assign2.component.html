@@ -1,0 +1,113 @@
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12 text-left rounded shadow py-5">
+            <h2> Registration Form Assignment </h2>
+            <h5> Template Driven Form </h5>
+            <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="firstname"> First Name</label>
+                            <input type="text" class="form-control" id="firstname" name="firstname" #firstname="ngModel"
+                                placeholder="Enter first name" ngModel required minlength="5" maxlength="5">
+                            <small class="text-danger" *ngIf="!firstname.valid && firstname.touched"> 
+                                <span class="text-danger" *ngIf="firstname.errors.minlength"> Enter at least 5 characters </span>
+                            </small>
+                        </div>
+
+                        <div class="col mb-3">
+                            <label for="lastname"> Last Name</label>
+                            <input type="text" class="form-control" id="lastname" name="lastname" #lastname="ngModel"
+                                placeholder="Enter last name" ngModel required maxlength="10" minlength="10">
+                            <small class="text-danger" *ngIf="!lastname.valid && lastname.touched"> 
+                            <span class="text-danger" *ngIf="lastname.errors.minlength"> Minimum 10 characters allowed  </span>
+                        </small>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="age"> Age </label>
+                    <input type="number" class="form-control" id="age" name="age" #age="ngModel"
+                        placeholder="Enter age" ngModel required min="17" max="20">
+                        <!-- <small *ngIf="((age.value!=18 && age.value!=19 && age.value!=20)) && age.touched" class="text-danger"> Enter valid age B/W 17-20</small> -->
+                        <small *ngIf="((age.value! >20 )) && age.touched" class="text-danger"> Enter age between 17-20</small>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address </label>
+                    <input type="email" class="form-control" id="email" name="email" #email="ngModel"
+                        placeholder="abc@gmail.com" ngModel required>
+                    <small class="text-danger" *ngIf="!email.valid && email.touched"> Enter valid email </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile"> Mobile Number </label>
+                    <input type="number" class="form-control" id="mobile" name="mobile" #mobile="ngModel" placeholder="Mobile No" ngModel
+                       value="+91" pattern="[0-9]{10}" required maxlength="10">
+                       <small class="text-danger" *ngIf="(!mobile.valid && mobile.touched) || mobile.errors?.pattern"> Mobile No is required </small>
+                </div>
+
+                <div class="form-group">
+                        <label for="select"> City </label>
+                        <select class="form-control" id="city" name="city" [ngModel]="defaultValue" required>
+                            <option value="Mumbai"> Mumbai </option>
+                            <option value="Kolkata"> Kolkata </option>
+                            <option value="Delhi"> Delhi </option>
+                        </select>
+                    </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <div *ngFor="let gender of genders" class="custome-control custome-radio">
+                        <input type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}"
+                            class="custome-control-input" [ngModel]="defaultGender">
+                        <label for="{{gender.id}}" class="custome-control-label">{{gender.value}}</label>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="password"> Password </label>
+                            <input type="password" class="form-control" id="password" name="password" #password="ngModel" ngModel required minlength="6">
+                            <small class="text-danger" *ngIf="!password.valid && password.touched"> Enter password  </small>
+                            <!-- {{password.value}} -->
+                        </div>
+
+                        <div class="col mb-3">
+                            <label for="pwd"> Confirm Password </label>
+                            <input type="password" class="form-control" id="pwd" name="pwd" #pwd="ngModel" ngModel required minlength="6" >
+                            <small class="text-danger" *ngIf="!pwd.valid && pwd.touched "> Enter confirm password </small>
+                            <small class="text-danger" *ngIf="password.value!=pwd.value"> Password mismatched </small>
+                            <!-- {{pwd.value}} -->
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary"> Submit </button>
+
+                <div class="row justify-content-left mt-2" *ngIf="submitted">
+                    <div class=".col-md-6.rounded.shadow py-4">
+                        <h1>Registration form data </h1>
+                        <p> First name: <strong>{{emp.firstname}} </strong></p>
+                        <p> Last name: <strong>{{emp.lastname}} </strong></p>
+                        <p> Age: <strong> {{emp.age}}</strong></p>
+                        <p> Email: <strong>{{emp.email}} </strong></p>
+                        <p> Mobile No : <strong>{{emp.mobile}} </strong></p>
+                        <p> City : <strong>{{emp.city}} </strong></p>
+                        <p> Gender: <strong> {{emp.gender}}</strong></p>
+                        <p> Password: <strong> {{emp.password}}</strong></p>
+                        <p>Confirm Password: <strong> {{emp.pwd}}</strong></p>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>

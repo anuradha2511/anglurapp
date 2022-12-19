@@ -25,6 +25,8 @@ import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { TemplateFormAssignComponent } from './template-form-assign/template-form-assign.component';
+import { TempAssign2Component } from './temp-assign2/temp-assign2.component';
+import { ReactiveFormAssignComponent } from './reactive-form-assign/reactive-form-assign.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { TemplateFormAssignComponent } from './template-form-assign/template-for
     ChildComponent,
     ParentComponent,
     ReactiveformComponent,
-    TemplateFormAssignComponent
+    TemplateFormAssignComponent,
+    TempAssign2Component,
+    ReactiveFormAssignComponent
   ],
   imports: [
     BrowserModule,

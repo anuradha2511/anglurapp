@@ -11,6 +11,7 @@ export class TemplateFormAssignComponent implements OnInit {
   defaultValue:string = 'Advanced';
   emp= new Employee1();
   submitted: boolean= false;
+  myForm: any;
   
   constructor() { }
 
@@ -32,5 +33,9 @@ console.log(emp.username);
 console.log(emp.email);
 console.log(emp.subscription);
 console.log(emp.password);
+  }
+
+  reset(){
+    this.myForm.reset();
   }
 }
