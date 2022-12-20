@@ -1,0 +1,39 @@
+<div class="continer">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded py-5">
+            <form [formGroup]="myReactForm" (ngSubmit)="OnSubmit()">
+    <div class="form-group">
+        <label for="pname">Project Name: </label>
+        <input type="text" class="form-control" id="pname" formControlName="pname">
+    <small *ngIf="!myReactForm.get('pname').valid && myReactForm.get('pname').touched" class="text-danger">
+    <small *ngIf="myReactForm.get('pname').errors['required']"> Project name is required </small>
+    <small *ngIf="myReactForm.get('pname').errors['namesNotAllowed']">  {{myReactForm.get('pname').value}}  is not allowed  </small>
+    </small>
+    </div>
+    
+    <div class="form-group">
+        <label for="mail"> Email: </label>
+    <input type="email" class="form-control" id="mail" formControlName="mail" placeholder="Enter mail" >
+    <small *ngIf="myReactForm.get('mail').invalid && myReactForm.get('pname').touched" class="text-danger"> 
+    <small *ngIf="myReactForm.get('mail').errors['required']"> Enter valid Email</small>
+    <small *ngIf="myReactForm.get('mail').errors['NaEmails']">  Mail  is not allowed {{myReactForm.get('mail').value}} </small>
+    
+    <!-- <small  *ngIf="myReactForm.get('mail').errors['email']"> Please enter valid email</small> -->
+    
+    </small>
+    </div>
+    
+    <div class="form-group">
+        <label for="select"> Project Status: </label>
+        <select class="form-control" id="project" formControlName="projectstatus">
+    <option value="Stable">Stable </option>
+    <option value="Critical"> Critical</option>
+    <option value="Finished"> Finished </option>
+        </select>
+    </div>
+    <button class="btn btn-primary"> Submit </button>
+    </form>
+    </div>
+    </div>
+    
+    </div>

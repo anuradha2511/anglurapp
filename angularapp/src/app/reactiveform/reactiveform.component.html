@@ -47,15 +47,18 @@
                         <div class="form-group" formArrayName="skills">
                             <label> Skills </label>
                             <ng-container *ngFor="let skill of this.myReactiveForm.get('skills').controls; index as i">
+
                                 <input type="text" class="form-control mt-2" formControlName="{{i}}"
                                     placeholder="Add skills">
+                                    <button class="btn btn-danger btn-sm mt-4 " (click)="OnRemoveSkills(i)"> Remove Skills </button><br>
                             </ng-container>
+
                             <button class="btn btn-light btn-sm mt-4 btn-add" (click)="OnAddSkills()"><i> + </i> Add
-                                Skills</button>
+                                Skills</button> &nbsp; &nbsp; &nbsp;
                         </div>
                     </div>
                     <button class="btn btn-primary"> Submit </button> &nbsp; &nbsp; &nbsp;
-                    <button class="btn btn-danger" (click)="resetForm()"> Clear </button>
+                    <!-- <button class="btn btn-danger" (click)="resetForm()"> Clear </button> -->
 
                 </form>
             </div>

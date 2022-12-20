@@ -37,3 +37,7 @@ margin-right: 3px;
         border: 1px solid rgb(111, 185, 211);
         background-color: antiquewhite;
     }
+    .text-danger{
+        padding-top: 0px;
+        margin-top: 0px;
+    }

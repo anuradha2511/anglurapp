@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-hooks-assign',
   templateUrl: './hooks-assign.component.html',
@@ -8,11 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class HooksAssignComponent implements OnInit {
 
   constructor() {
-    console.log('Constructor called');
-    
    }
 
   ngOnInit() {
   }
 
 }
+
+  
+

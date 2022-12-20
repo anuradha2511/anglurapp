@@ -27,7 +27,10 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { TemplateFormAssignComponent } from './template-form-assign/template-form-assign.component';
 import { TempAssign2Component } from './temp-assign2/temp-assign2.component';
 import { ReactiveFormAssignComponent } from './reactive-form-assign/reactive-form-assign.component';
-
+import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
+import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
+import { HttpClientModule} from '@angular/common/http';
+import { ReactiveProjectComponent } from './reactive-project/reactive-project.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,13 +56,17 @@ import { ReactiveFormAssignComponent } from './reactive-form-assign/reactive-for
     ReactiveformComponent,
     TemplateFormAssignComponent,
     TempAssign2Component,
-    ReactiveFormAssignComponent
+    ReactiveFormAssignComponent,
+    Servicecomp1Component,
+    Servicecomp2Component,
+    ReactiveProjectComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
