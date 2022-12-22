@@ -17,6 +17,11 @@ export class AppComponent implements OnInit {
       console.log('getting data from api', data);
       
     } )
+
+    //  this._demoService.getPosts().subscribe(results => {
+    //   console.log('posts', results);
+      
+    // })
   }
   data: string = 'red';
   name: string;

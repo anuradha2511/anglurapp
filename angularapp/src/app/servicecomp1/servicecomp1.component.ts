@@ -16,6 +16,7 @@ export class Servicecomp1Component implements OnInit {
   //  this.productss = this._demoService.products;
   this._demoService.getUsersData().subscribe(data => {
     console.log('getting data from api', data);
+    this.apiData=(data);
     console.log('getting data from array', this.apiData);
     
     

@@ -31,6 +31,12 @@ import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
 import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
 import { HttpClientModule} from '@angular/common/http';
 import { ReactiveProjectComponent } from './reactive-project/reactive-project.component';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
+import { Emp1Component } from './emp1/emp1.component';
+import { Emp2Component } from './emp2/emp2.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +65,13 @@ import { ReactiveProjectComponent } from './reactive-project/reactive-project.co
     ReactiveFormAssignComponent,
     Servicecomp1Component,
     Servicecomp2Component,
-    ReactiveProjectComponent
+    ReactiveProjectComponent,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component,
+    Emp1Component,
+    Emp2Component
   ],
   imports: [
     BrowserModule,

@@ -22,14 +22,14 @@ Product Name: <strong class="text-success">{{product.name}} </strong>
         </tr>
     </thead>
 <tbody>
-<tr *ngFor="let datas of apiData">
-    <td> {{datas.id}}</td>
-    <td> {{datas.name}}</td>
-    <td> {{datas.username}}</td>
-    <td> {{datas.email}}</td>
-    <td> {{datas.address}}</td>
-    <td> {{datas.company}}</td>
-    <td> {{datas.website}}</td>
+<tr *ngFor="let data of apiData">
+    <td> {{data.id}}</td>
+    <td> {{data.name}}</td>
+    <td> {{data.username}}</td>
+    <td> {{data.email}}</td>
+    <td> {{data.address.city}}</td>
+    <td> {{data.company.name}}</td>
+    <td> {{data.website}}</td>
 </tr>
 </tbody>
 </table>
