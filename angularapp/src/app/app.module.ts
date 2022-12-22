@@ -37,6 +37,8 @@ import { Comp3Component } from './comp3/comp3.component';
 import { Comp4Component } from './comp4/comp4.component';
 import { Emp1Component } from './emp1/emp1.component';
 import { Emp2Component } from './emp2/emp2.component';
+import { PipedemoComponent } from './pipedemo/pipedemo.component';
+import { CountPipe } from './count.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +73,9 @@ import { Emp2Component } from './emp2/emp2.component';
     Comp3Component,
     Comp4Component,
     Emp1Component,
-    Emp2Component
+    Emp2Component,
+    PipedemoComponent,
+    CountPipe
   ],
   imports: [
     BrowserModule,

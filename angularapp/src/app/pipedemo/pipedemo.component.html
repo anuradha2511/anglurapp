@@ -1,0 +1,40 @@
+<p>pipedemo works!</p>
+
+<div>
+    <!-- Pipes ( | ) -->
+    Today's Date : {{todaysDate | date:'fullDate'}} <br>
+    Today's Date : {{todaysDate | date}} <br>
+
+    <!-- Chained pipes (We combine multiple pipes [|])-->
+    Today's Date  : {{todaysDate | date:'fullDate' | uppercase}} <br>
+    Today's Date : {{todaysDate | date:'fullDate' | lowercase}} <br>
+</div>
+
+<div>
+    get values {{obser | async}}
+</div>
+
+<div>
+    Currency Pipe: 
+    <div>
+       
+       Amount in Indian currency: {{price | currency: 'INR'}} <br>
+        {{price | currency: 'USD'}} <br>
+        {{price | currency: 'EUR'}} <br>
+        
+         <!-- convert decimal to number  -->
+         {{prices | number}} <br> 
+    </div>
+
+</div>
+
+<div>
+    <!-- It is use to transfer javascript object into a json string  -->
+    {{obj | json}} <br>
+</div>
+
+<div>
+    <!-- Return length of given number/ string -->
+   length of given number: {{pricess | count}} <br>
+   {{value | count}}
+</div>
