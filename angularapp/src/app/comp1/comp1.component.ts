@@ -19,8 +19,15 @@ this._utilityService.userName.subscribe(res => {
 
   updateUserName(uname) {
 console.log(uname.value);
+
+let emp = {
+  name: 'Pratiksha',
+  id: '101'
+}
 //next method is used to send message to an observable i.e. username
-this._utilityService.userName.next(uname.value);
+ this._utilityService.userName.next(uname.value);
+ 
+//this._utilityService.userName.next(JSON.stringify(emp));
 
   }
 }

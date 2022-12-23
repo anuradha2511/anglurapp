@@ -12,6 +12,8 @@ export class Comp2Component implements OnInit {
   constructor(private _utilityService: UtilityService) {
     this._utilityService.userName.subscribe(res => {
       this.userName= res;
+      console.log(res);
+      
     })
    }
 
@@ -21,8 +23,14 @@ export class Comp2Component implements OnInit {
 
   updateUserName(uname){
 console.log(uname.value);
+
+let emp = {
+  name: 'Anuradha',
+  id: '102'
+}
 //next method is used to send message to an observable i.e. username
 this._utilityService.userName.next(uname.value);
 
+// this._utilityService.userName.next(JSON.stringify(emp));
   }
 }

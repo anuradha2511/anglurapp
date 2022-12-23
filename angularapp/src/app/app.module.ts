@@ -39,6 +39,10 @@ import { Emp1Component } from './emp1/emp1.component';
 import { Emp2Component } from './emp2/emp2.component';
 import { PipedemoComponent } from './pipedemo/pipedemo.component';
 import { CountPipe } from './count.pipe';
+import { PipeassignComponent } from './pipeassign/pipeassign.component';
+import { CustcountPipe } from './custcount.pipe';
+import { FilterpipeComponent } from './filterpipe/filterpipe.component';
+import { FilterPipe } from './filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,7 +79,11 @@ import { CountPipe } from './count.pipe';
     Emp1Component,
     Emp2Component,
     PipedemoComponent,
-    CountPipe
+    CountPipe,
+    PipeassignComponent,
+    CustcountPipe,
+    FilterpipeComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from '../services/employee.service';
 
 @Component({
   selector: 'app-emp2',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Emp2Component implements OnInit {
 
-  constructor() { }
+ employee;
+  constructor(private _employeeService: EmployeeService) {
+    this._employeeService.employee.subscribe(res => {
+      this.employee = res;
+      console.log(res);
+      
+    })
+   }
 
   ngOnInit() {
+  }
+  updateEmployeeDetails(emp1) {
+    console.log(emp1.value);
+
+    let emp = {
+      id: '102',
+      name:'Pratiksha',
+      salary: '50,000'
+    }
+       this._employeeService.employee.next(JSON.stringify(emp));
+
   }
 
 }

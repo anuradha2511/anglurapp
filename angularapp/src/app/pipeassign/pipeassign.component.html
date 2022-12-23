@@ -1,0 +1,45 @@
+<body>
+<h4> Built in pipe & Custom pipe examples</h4>
+    <strong> Date pipe :</strong> &nbsp;  <i>This pipe is used for the transformation of dates.</i>
+    <ul>
+        <li> Today's Date : {{todayDate}} </li>
+        <li> Date : {{todayDate | date}} </li>
+        <li> Short Date & Time : {{todayDate | date:'short'}} </li>
+        <li> Full Date : {{todayDate | date:'fullDate'}}</li>
+        <li> Lowercase Format : {{todayDate | date:'fullDate' | lowercase}} </li>
+        <li> Uppercase Format : {{todayDate | date:'fullDate' | uppercase}} </li>
+    </ul>
+
+    <hr>
+
+    <strong> Currency Pipe:</strong> &nbsp; This pipe is used for formatting currencies. -
+    
+    <ul>
+        <li> Price : {{price}} </li>
+        <li> Currency price in India : {{price | currency: 'INR'}}</li>
+        <li> Currency price in USD : {{price | currency: 'USD'}}</li>
+        <li> Currency price in European : {{price | currency :'EUR' }}</li>
+    </ul>
+    <hr>
+
+    <strong>Json Pipe : </strong> &nbsp; This transforms a JavaScript object into a JSON string.
+    
+    <ul>
+        <li> Json Object Format: {{obj | json}}</li>
+        <li> Object in Lowercase format: {{obj | json | lowercase}}</li>
+    </ul>
+    <hr>
+
+    <strong> async :</strong>   &nbsp;  If data comes in the form of observables, then Async pipe subscribes to an observable and returns the transmitted values
+
+    <ul>
+        <li> get value: {{observable | async}}</li>
+    </ul>
+    <hr>
+    <h4> Custom pipe: </h4>
+    <ul>
+        <li> string : {{val}}</li>
+        <li> string length : {{val | count}} </li>
+    </ul>
+
+</body>
