@@ -43,6 +43,8 @@ import { PipeassignComponent } from './pipeassign/pipeassign.component';
 import { CustcountPipe } from './custcount.pipe';
 import { FilterpipeComponent } from './filterpipe/filterpipe.component';
 import { FilterPipe } from './filter.pipe';
+import { CustompipeComponent } from './custompipe/custompipe.component';
+import { CustomPipe } from './custom.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,7 +85,9 @@ import { FilterPipe } from './filter.pipe';
     PipeassignComponent,
     CustcountPipe,
     FilterpipeComponent,
-    FilterPipe
+    FilterPipe,
+    CustompipeComponent,
+    CustomPipe
   ],
   imports: [
     BrowserModule,

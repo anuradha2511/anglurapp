@@ -1,0 +1,26 @@
+<h4> Employee Details </h4>
+<br>
+<div class="table">
+<div class="col-md-8">
+    <table class="table table-striped ">
+        <thead class="thead-dark">
+            <tr class="bg-dark">
+                <th scope="col"> ID </th>
+                <th scope="col"> Name </th>
+                <th scope="col"> Gender</th>
+                <th scope="col"> Company</th>
+                <th scope="col"> Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employee">
+                <td scope="row"> {{emp.id}} </td>
+                <td> {{emp.name | custom:emp.gender }} </td>
+                <td> {{emp.gender}} </td>
+                <td> {{emp.company}} </td>
+                <td> {{emp.salary }} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
