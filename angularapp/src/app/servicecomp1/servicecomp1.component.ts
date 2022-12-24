@@ -22,10 +22,10 @@ export class Servicecomp1Component implements OnInit {
     
   })
   }
-  OnSubscribe() 
-  {
-    // alert('servicecomp1 subscribe');
-    this._demoService.display();
-  }
+  // OnSubscribe() 
+  // {
+  //   alert('servicecomp1 subscribe');
+  //    this._demoService.display();
+  // }
 
 }

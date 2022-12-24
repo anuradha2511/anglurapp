@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./custompipe.component.css']
 })
 export class CustompipeComponent implements OnInit {
- employee: any [] = [
+  
+  employee: any [] = [
   {
     id:'101', name:'Pratiksha', gender:'Female', company: 'TCS', salary: '45,000'
   },

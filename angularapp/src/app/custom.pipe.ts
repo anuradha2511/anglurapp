@@ -5,8 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CustomPipe implements PipeTransform {
 
-  // text1 = "Mr. ";
-  // text2 = "Mrs. ";
+  //  m= "Mr. ";
+  // fm = "Mrs. ";
 
   transform(name: string, gender: string): string {
 
@@ -15,11 +15,11 @@ export class CustomPipe implements PipeTransform {
     else
     return "Mrs. " + name;
   }
-  
+
     // if (gender == 'Male')
-    //   return this.text1 + name;
+    //   return this.m + name;
     // else {
-    //   return this.text2 + name;
+    //   return this.fm + name;
     // }
     
 }

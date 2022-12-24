@@ -45,6 +45,11 @@ import { FilterpipeComponent } from './filterpipe/filterpipe.component';
 import { FilterPipe } from './filter.pipe';
 import { CustompipeComponent } from './custompipe/custompipe.component';
 import { CustomPipe } from './custom.pipe';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { ProductComponent } from './product/product.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -87,7 +92,12 @@ import { CustomPipe } from './custom.pipe';
     FilterpipeComponent,
     FilterPipe,
     CustompipeComponent,
-    CustomPipe
+    CustomPipe,
+    AboutusComponent,
+    ContactusComponent,
+    ProductComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
