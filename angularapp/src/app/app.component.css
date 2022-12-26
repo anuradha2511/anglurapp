@@ -6,3 +6,7 @@
     font-weight: bold;
     font-family:cursive ;
 }
+nav a:hover{
+color: blue;
+background: rgb(212, 207, 207);
+}

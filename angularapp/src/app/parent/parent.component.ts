@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
+  eName : string = 'Janavi Patil'; 
+  empobj: any = {
+    id:101,
+    name: 'Anuradha',
+    salary: 45000
+  }
+  
 name: string = "Anuradha Patil";
 education: any[]=[];
 

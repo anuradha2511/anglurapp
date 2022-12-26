@@ -8,6 +8,8 @@ import { Education } from '../models/education';
 })
 export class ChildComponent implements OnInit {
 @Input() parentComp: string;
+@Input() employeeName: string;
+@Input() Employeeobj:string;
 @Output() eduEvent: EventEmitter<any> = new EventEmitter<any>();
   constructor() { }
 
@@ -22,6 +24,8 @@ addData(){
 
 }
   ngOnInit() {
+    console.log("Data from child ", JSON.stringify(this.employeeName));
+    
   }
 
 }
