@@ -27,6 +27,7 @@ export class DemoService {
   getUsersData()
   {
     let users = 'users';
+    // return this.http.get(this.apiURL)
    return  this.http.get(this.apiURL+ users);
     
   }

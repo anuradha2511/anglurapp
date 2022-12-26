@@ -10,7 +10,7 @@ export class CustomPipe implements PipeTransform {
 
   transform(name: string, gender: string): string {
 
-    if (gender.toLocaleLowerCase()== "male")
+    if (gender.toLowerCase() == "male")  
     return "Mr. " + name;
     else
     return "Mrs. " + name;

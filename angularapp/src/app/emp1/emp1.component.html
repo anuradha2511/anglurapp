@@ -1,6 +1,48 @@
-<p>emp1 works!</p>
+<!-- <p>emp1 works!</p>
 <div  class="box">
-    Employee Details: <strong> {{employee}}</strong><br>
+    Employee Details: <strong> {{employee}}</strong>
+     <br>
     <input type="text" id="" name="" placeholder="Employee details" #emp1>
     <button (click)="updateEmployeeDetails(emp1)"> Update </button>
+</div> -->
+
+<div class="mainDiv">
+    <h2>Employee  1</h2>
+    <div class="box">
+        <table>
+            <tr>
+                <td><label class="form-label"> Name: </label></td>
+                <td><input class="form-control" type="text" name="" id="" placeholder="Update user name" #name></td>
+            </tr>
+            <tr>
+                <td><label class="form-label"> City: </label></td>
+                <td><input class="form-control" type="text" name="" id="" placeholder="Update city" #city></td>
+            </tr>
+            <tr>
+                <td><label class="form-label"> Mobile No: </label></td>
+                <td><input class="form-control" type="text" name="" id="" placeholder="Update mobile number" #mobile></td>
+            </tr>
+            <tr>
+                <td><label class="form-label"> Company: </label></td>
+                <td><input class="form-control" type="text" name="" id="" placeholder="Update company" #company> </td>
+            </tr>
+            <tr>
+                <td><label class="form-label"> Salary </label></td>
+                <td><input class="form-control" type="number" name="" id="" placeholder="Update salary" #salary></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button class="btn btn-primary" (click)="updateEmployeeDetails(name, city, mobile, company, salary)"> Update </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="box" *ngIf="employee">
+            <h3>Employee Details</h3>
+                <label>Name:</label> &nbsp; <b>{{employee.name}}</b> <br>
+                <label>City:</label> &nbsp; <b>{{employee.city}}</b> <br>
+                <label>Mobile No:</label> &nbsp; <b>{{employee.mobile}}</b> <br>
+                <label>Company:</label> &nbsp; <b>{{employee.company}}</b>
+                <label>Salary:</label> &nbsp; <b>{{employee.salary}}</b>
+    </div>
 </div>

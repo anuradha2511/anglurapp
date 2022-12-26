@@ -27,8 +27,14 @@ Product Name: <strong class="text-success">{{product.name}} </strong>
     <td> {{data.name}}</td>
     <td> {{data.username}}</td>
     <td> {{data.email}}</td>
-    <td> {{data.address.city}}</td>
-    <td> {{data.company.name}}</td>
+    <td> {{data.address.city}}
+        {{data.address.geo.lat}}
+        {{data.address.geo.lng}}
+        {{data.address.street}}
+        {{data.address.suite}}
+        {{data.address.zipcode}}
+    </td>
+    <td> {{data.company.name}}, {{data.company.catchPhrase}}, {{data.company.bs}}</td>
     <td> {{data.website}}</td>
 </tr>
 </tbody>

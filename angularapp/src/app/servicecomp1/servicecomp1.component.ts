@@ -8,22 +8,23 @@ import { DemoService } from '../services/demo.service';
 })
 export class Servicecomp1Component implements OnInit {
 
-  productss = {};
-  apiData ={};
+  productss:any =[{}];
+  apiData: any= [];
   constructor(private _demoService: DemoService) { }
 
   ngOnInit() {
   //  this.productss = this._demoService.products;
+  
   this._demoService.getUsersData().subscribe(data => {
     console.log('getting data from api', data);
-    this.apiData=(data);
+    this.apiData =data;
     console.log('getting data from array', this.apiData);
     
     
   })
   }
-  // OnSubscribe() 
-  // {
+  //  OnSubscribe() 
+  //  {
   //   alert('servicecomp1 subscribe');
   //    this._demoService.display();
   // }

@@ -7,7 +7,7 @@ export class FilterPipe implements PipeTransform {
 
   transform(val: any, searchTearm): any {
     return val.filter(function(search) {
-return search.name.toLowerCase().indexOf(searchTearm.toLowerCase()) > -1
+return search.price.toLowerCase().indexOf(searchTearm.toLowerCase()) > -1
     });
   }
 

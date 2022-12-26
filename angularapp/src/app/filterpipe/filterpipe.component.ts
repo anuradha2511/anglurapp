@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filterpipe.component.css']
 })
 export class FilterpipeComponent implements OnInit {
-  namesearch: string = '';
+  namesearch: any= '';
   productArr: any [] = [
     {
       sno: 1,
