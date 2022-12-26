@@ -5,16 +5,18 @@
             <form>
                 <div class="form-group">
                     <label for="email"> Email </label>
-                     <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                     <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" #uname>
                 </div>
 <div class="form-group">
     <label for="pwd"> Password </label>
-    <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Enter your password">
+    <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Enter your password" #pwd>
 </div>
-<div class="checkbox">
-<label> <input type="checkbox">Check out</label>
+<div class="form-check">
+    <input type="checkbox" id="exampleCheck" class="form-check-input">
+    <label for="exampleCheck" class="form-check-label">Check me out </label>
+
 </div>
-<button class="btn btn-primary" type="submit"> Submit </button>
+<button class="btn btn-primary" type="submit" (click)="checkuser(uname.value, pwd.value)"> Submit </button>
 </form>
 </div>
 </div>

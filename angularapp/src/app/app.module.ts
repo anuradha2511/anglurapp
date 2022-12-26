@@ -51,6 +51,11 @@ import { ProductComponent } from './product/product.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { EducationComponent } from './education/education.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { TvComponent } from './product/tv/tv.component';
+import { TabletComponent } from './product/tablet/tablet.component';
+import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -99,7 +104,12 @@ import { EducationComponent } from './education/education.component';
     ProductComponent,
     HomeComponent,
     LoginComponent,
-    EducationComponent
+    EducationComponent,
+    PagenotfoundComponent,
+    LaptopComponent,
+    TvComponent,
+    TabletComponent,
+    WashingmachineComponent
   ],
   imports: [
     BrowserModule,
