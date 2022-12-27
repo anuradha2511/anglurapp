@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { DemopostComponent } from './demopost/demopost.component';
 import { EducationComponent } from './education/education.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { PostdetailsComponent } from './postdetails/postdetails.component';
 import { LaptopComponent } from './product/laptop/laptop.component';
 import { ProductComponent } from './product/product.component';
 import { TabletComponent } from './product/tablet/tablet.component';
@@ -27,6 +29,8 @@ const routes: Routes = [
   ]}, 
   { path:'contactus', component: ContactusComponent},
   { path:'education', component: EducationComponent},
+  { path:'demopost', component:DemopostComponent},
+  { path:'postdetails/:id', component: PostdetailsComponent},
   { path:'**', component:PagenotfoundComponent}
 ];
 

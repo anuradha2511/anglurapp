@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,11 +12,13 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
-checkuser(uname, password)
-{
-  if(uname== 'admin' && password == 'admin')
-  {
-this._route.navigate(['product/laptop']);
+  checkuser(uname, password) {
+    if (uname == 'admin' && password == 'admin') {
+      alert('Login successfully!');
+      this._route.navigate(['product/laptop']);
+    }
+    else {
+      alert('Login Not successfully ');
+    }
   }
-}
 }
