@@ -15,8 +15,9 @@ arrPosts: Post[] = [];
 
   ngOnInit() {
     this._postServics.getPosts().subscribe(res =>{
-      console.log('jsonplaceholder',res);
       this.arrPosts = res;
+      console.log('jsonplaceholder',this.arrPosts);
+
     })
   }
 

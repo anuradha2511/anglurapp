@@ -1,1 +1,75 @@
 <p>postdetails works!</p>
+
+    <!-- <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th> UserID</th>
+            <th> Id</th>
+            <th> Title</th>
+          <th> Body</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of arrPosts">
+            <td> {{p.userId}}</td>
+            <td>{{p.id}}</td>
+            <td>{{p.title}}</td>
+            <td>{{p.body}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+ 
+ <div>
+<!-- <h4> Please click on the below button open popup</h4>
+<hr>  -->
+<button style="margin:40px; padding:10px;" type="button" class="btn btn-primary" (click)="openPopup()"> Show Data</button>
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+<div class="modal-dialog" role="document">
+<div class="modal-header">
+
+</div>
+<br>
+<div class="col-md-12 text-left rounded shadow py-5">
+  <h5 class="modal-title">Post API Data </h5>
+
+<div class="modal-body">
+  <div class="container">
+<div class="row justify-content-center">
+ 
+      <table class="table">
+        <thead>
+          <tr>
+            <th> UserID</th>
+            <th> Id</th>
+            <th> Title</th>
+          <th> Body</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of arrPosts">
+            <td> {{p.userId}}</td>
+            <td>{{p.id}}</td>
+            <td>{{p.title}}</td>
+            <td>{{p.body}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-danger" (click)="closePopup()"> Close </button>
+</div>
+</div>
+</div>
+</div>
+
+
+
+     
+
+    
