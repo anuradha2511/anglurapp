@@ -20,13 +20,7 @@ const routes: Routes = [
   { path:'login', component: LoginComponent},
   { path:'home', component: HomeComponent}, //localhost://4200
   { path:'aboutus', component: AboutusComponent}, //localhost://4200 /aboutus
-  { path:'product', component: ProductComponent, children: [ // localhost:4200/product/laptop/tv
-    // { path: '', component: ProductComponent},
-    { path: 'laptop', component: LaptopComponent},
-    { path: 'tablet', component: TabletComponent},
-    { path: 'tv', component: TvComponent},
-    { path: 'washingmachine', component: WashingmachineComponent}
-  ]}, 
+  
   { path:'contactus', component: ContactusComponent},
   { path:'education', component: EducationComponent},
   { path:'demopost', component:DemopostComponent},

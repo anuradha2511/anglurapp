@@ -13,7 +13,6 @@ import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { StructuraldirectivesComponent } from './structuraldirectives/structuraldirectives.component';
 import { NgswitchassignComponent } from './ngswitchassign/ngswitchassign.component';
 import { AttriComponent } from './attri/attri.component';
-import { CustdirDirective } from './custdir.directive';
 import { DemoComponent } from './demo/demo.component';
 import { HooksComponent } from './hooks/hooks.component';
 import { HooksAssignComponent } from './hooks-assign/hooks-assign.component';
@@ -47,17 +46,17 @@ import { CustompipeComponent } from './custompipe/custompipe.component';
 import { CustomPipe } from './custom.pipe';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { ProductComponent } from './product/product.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { EducationComponent } from './education/education.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { LaptopComponent } from './product/laptop/laptop.component';
-import { TvComponent } from './product/tv/tv.component';
-import { TabletComponent } from './product/tablet/tablet.component';
-import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
+
 import { DemopostComponent } from './demopost/demopost.component';
 import { PostdetailsComponent } from './postdetails/postdetails.component';
+import { ProductsModule } from './product/products.module';
+// import { ElectricalsComponent } from './electricals/electricals.component';
+import { ElectricalModule } from './electricals/electrical.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,7 +69,6 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
     StructuraldirectivesComponent,
     NgswitchassignComponent,
     AttriComponent,
-    CustdirDirective,
     DemoComponent,
     HooksComponent,
     HooksAssignComponent,
@@ -103,24 +101,26 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
     CustomPipe,
     AboutusComponent,
     ContactusComponent,
-    ProductComponent,
     HomeComponent,
     LoginComponent,
     EducationComponent,
     PagenotfoundComponent,
-    LaptopComponent,
-    TvComponent,
-    TabletComponent,
-    WashingmachineComponent,
     DemopostComponent,
-    PostdetailsComponent
+    PostdetailsComponent,
+    // ElectricalsComponent,
+  
   ],
   imports: [
+    
     BrowserModule,
+    ElectricalModule,
+    ProductsModule,
+  
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
