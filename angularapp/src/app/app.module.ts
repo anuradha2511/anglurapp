@@ -114,8 +114,6 @@ import { ElectricalModule } from './electricals/electrical.module';
     
     BrowserModule,
     ElectricalModule,
-    ProductsModule,
-  
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -125,4 +123,9 @@ import { ElectricalModule } from './electricals/electrical.module';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(){
+    console.log('App module called');
+    
+  }
+}

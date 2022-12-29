@@ -13,7 +13,7 @@ const electRoutes: Routes = [
  { path:'powergeneration', component: PowergenerationComponent},
  { path:'energymeter', component: EnergymeterComponent},
  { path:'electricalspares', component: ElectricalsparesComponent},
- { path:'switches', component: SwitchesComponent }
+ { path:'switches', component: SwitchesComponent}
   ]},
 ]
 

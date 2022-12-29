@@ -22,6 +22,7 @@ arrPosts:any[] = [];
   }
   
  displayStyle = "none";
+
  openPopup(){
   this.displayStyle = "block";
  }

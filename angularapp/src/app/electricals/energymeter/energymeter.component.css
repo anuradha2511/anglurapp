@@ -6,6 +6,8 @@ img{
 /* .table{
     border: 1px solid black;
 } */
-/* .title{
-    background-color: yellow;
-} */
+
+.shadow{
+    height:550px;
+    width:450px;
+}

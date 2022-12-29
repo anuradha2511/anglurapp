@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DemopostComponent } from './demopost/demopost.component';
@@ -25,11 +25,19 @@ const routes: Routes = [
   { path:'education', component: EducationComponent},
   { path:'demopost', component:DemopostComponent},
   { path:'postdetails/:id', component: PostdetailsComponent},
-  { path:'**', component:PagenotfoundComponent}
+  // lazy loading called on demand 
+  { path: 'product', loadChildren: './product/products.module#ProductsModule'},
+  { path: 'orders', loadChildren: './orders/orders.module#OrdersModule'},
+  { path:'**', component:PagenotfoundComponent} //wildcard page not found
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  constructor(){
+    console.log('Routing module called');
+    
+  }
+}

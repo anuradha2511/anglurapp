@@ -9,7 +9,7 @@ import { ProductComponent } from './product.component';
 import { UtilityModule } from '../models/utility.module';
 
 const prodRoutes : Routes = [
-{ path:'product', component: ProductComponent, children: [ // localhost:4200/product/laptop/tv
+{ path:'', component: ProductComponent, children: [ // localhost:4200/product/laptop/tv
     //  { path: '', component: ProductComponent},
     { path: 'laptop', component: LaptopComponent},
     { path: 'tablet', component: TabletComponent},
@@ -36,4 +36,9 @@ const prodRoutes : Routes = [
     UtilityModule
   ]
 })
-export class ProductsModule { }
+export class ProductsModule { 
+  constructor(){
+    console.log('Product module called');
+    
+  }
+}
