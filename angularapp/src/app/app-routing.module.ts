@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { AdduserComponent } from './adduser/adduser.component';
+import { AuthGuard } from './auth.guard';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { EducationComponent } from './education/education.component';
@@ -13,6 +15,7 @@ import { ProductComponent } from './product/product.component';
 import { TabletComponent } from './product/tablet/tablet.component';
 import { TvComponent } from './product/tv/tv.component';
 import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
+import { UnsavedchangesGuard } from './unsavedchanges.guard';
 
 
 const routes: Routes = [
@@ -25,8 +28,10 @@ const routes: Routes = [
   { path:'education', component: EducationComponent},
   { path:'demopost', component:DemopostComponent},
   { path:'postdetails/:id', component: PostdetailsComponent},
+  { path: 'adduser', component: AdduserComponent, canDeactivate: [UnsavedchangesGuard]},
   // lazy loading called on demand 
-  { path: 'product', loadChildren: './product/products.module#ProductsModule'},
+  //./product-foldername ,products.module ,#ProductsModule-class name
+  { path: 'product', canActivate: [AuthGuard], loadChildren: './product/products.module#ProductsModule'},
   { path: 'orders', loadChildren: './orders/orders.module#OrdersModule'},
   { path:'**', component:PagenotfoundComponent} //wildcard page not found
 ];

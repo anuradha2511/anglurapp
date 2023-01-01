@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,17 +9,29 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private _route: Router) { }
+  constructor(private _route: Router, private _authService: AuthService) { }
 
   ngOnInit() {
   }
   checkuser(uname, password) {
-    if (uname == 'admin' && password == 'admin') {
-      alert('Login successfully!');
-      this._route.navigate(['product/laptop']);
-    }
-    else {
-      alert('Login Not successfully ');
-    }
+
+var output = this._authService.checkUserNameandPassword(uname, password)
+  
+if(output == true)
+{
+  window.alert('Login successfully');
+  this._route.navigate(['product']);
+} else
+ {
+  window.alert('Invalid username and password');
+}
+
+// if (uname == 'admin' && password == 'admin') {
+    //   alert('Login successfully!');
+    //   this._route.navigate(['product/laptop']);
+    // }
+    // else {
+    //   alert('Login Not successfully ');
+    // }
   }
 }

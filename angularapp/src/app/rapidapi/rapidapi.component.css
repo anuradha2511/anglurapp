@@ -1,0 +1,25 @@
+/* .table{
+border: 1px solid black;
+}
+table th { border:1px solid rgb(40, 39, 39);}
+table td { border:1px solid rgb(50, 48, 48);}  */
+p{
+    /* margin-top: 20px; */
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: blue;
+    font-size: 20px;
+    font-style: italic;
+}
+th{
+    color:rgb(220, 52, 144)
+}
+h4{
+    font-weight: bold;
+    text-transform: capitalize;
+    color: blue;
+    font-size: 20px;
+    font-style: italic;
+}

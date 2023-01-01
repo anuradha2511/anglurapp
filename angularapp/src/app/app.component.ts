@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from './models/product';
 import { DemoService } from './services/demo.service';
+import { PostService } from './services/post.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { DemoService } from './services/demo.service';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private _demoService: DemoService){
+  constructor(private _demoService: DemoService, private _postsService: PostService){
 
   }
   ngOnInit(): void {
@@ -68,5 +69,12 @@ updateProduct(){
   // this.product = new Product();
   this.product.name = this.name;
   this.product.price = this.price;
+}
+
+DeletePost(){
+  this._postsService.deletePostById(1).subscribe( result => {
+    console.log(result);
+    
+  })
 }
 }

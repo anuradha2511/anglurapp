@@ -56,6 +56,8 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
 import { ProductsModule } from './product/products.module';
 // import { ElectricalsComponent } from './electricals/electricals.component';
 import { ElectricalModule } from './electricals/electrical.module';
+import { AdduserComponent } from './adduser/adduser.component';
+import { RapidapiComponent } from './rapidapi/rapidapi.component';
 
 @NgModule({
   declarations: [
@@ -107,6 +109,8 @@ import { ElectricalModule } from './electricals/electrical.module';
     PagenotfoundComponent,
     DemopostComponent,
     PostdetailsComponent,
+    AdduserComponent,
+    RapidapiComponent,
     // ElectricalsComponent,
   
   ],

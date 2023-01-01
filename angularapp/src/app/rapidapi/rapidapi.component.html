@@ -1,0 +1,173 @@
+<p> BB finance News API Data :</p>
+
+     <div> 
+        <div>
+            <table class="table table-bordered table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th> ID </th>
+                        <th> Title </th>
+                        <th> Card</th>
+                        <th> Date </th>
+                        <th> Long URL</th>
+                        <th> ThumbnailImage </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let r of newsApi">
+ <td> {{r.id}}</td>
+                         <td> {{r.title}}</td>
+                        <td> {{r.card}}</td>
+                        <td> {{r.date}}</td>
+                        <td> {{r.longURL}}</td>
+                        <td> {{r.thumbnailImage}}</td> 
+                    </tr>
+                    <!-- <tr *ngFor= let r of newsApi>
+                        <td> {{r.news[0].title}}</td>  <td>{{r.news[0].id}}</td> <td>{{r.news[0].card}}</td> <td>{{r.news[0].date}}</td> <td>{{r.news[0].longURL}}</td> <td>{{r.news[0].thumbnailImage}}</td> 
+                    </tr>
+                    <tr *ngFor= let r of newsApi>
+                        <td> {{r.news[1].title}}</td>  <td>{{r.news[1].id}}</td> <td>{{r.news[1].card}}</td> <td>{{r.news[1].date}}</td> <td>{{r.news[1].longURL}}</td> <td>{{r.news[1].thumbnailImage}}</td> 
+                    </tr>
+                    <tr *ngFor= let r of newsApi>
+                        <td> {{r.news[2].title}}</td>  <td>{{r.news[2].id}}</td> <td>{{r.news[2].card}}</td> <td>{{r.news[2].date}}</td> <td>{{r.news[2].longURL}}</td> <td>{{r.news[2].thumbnailImage}}</td> 
+                    </tr>
+                     <tr *ngFor= let r of newsApi>
+                        <td> {{r.news[3].title}}</td>  <td>{{r.news[3].id}}</td> <td>{{r.news[3].card}}</td> <td>{{r.news[3].date}}</td> <td>{{r.news[3].longURL}}</td> <td>{{r.news[3].thumbnailImage}}</td> 
+                     </tr>
+                      <tr *ngFor= let r of newsApi> 
+                        <td> {{r.news[4].title}}</td>  <td>{{r.news[4].id}}</td> <td>{{r.news[4].card}}</td> <td>{{r.news[4].date}}</td> <td>{{r.news[4].longURL}}</td> <td>{{r.news[4].thumbnailImage}}</td> 
+                      </tr> 
+                    <tr *ngFor= let r of newsApi>
+                      <td> {{r.news[5].title}}</td>  <td>{{r.news[5].id}}</td> <td>{{r.news[5].card}}</td> <td>{{r.news[5].date}}</td> <td>{{r.news[5].longURL}}</td> <td>{{r.news[5].thumbnailImage}}</td> 
+                    </tr>
+                    <tr *ngFor= let r of newsApi>
+                      <td> {{r.news[6].title}}</td>  <td>{{r.news[6].id}}</td> <td>{{r.news[6].card}}</td> <td>{{r.news[6].date}}</td> <td>{{r.news[6].longURL}}</td> <td>{{r.news[6].thumbnailImage}}</td> 
+                    </tr>   
+                     <tr *ngFor= let r of newsApi>
+                      <td> {{r.news[7].title}}</td>  <td>{{r.news[7].id}}</td> <td>{{r.news[7].card}}</td> <td>{{r.news[7].date}}</td> <td>{{r.news[7].longURL}}</td> <td>{{r.news[7].thumbnailImage}}</td> 
+                     </tr>
+                    <tr *ngFor= let r of newsApi>
+                     <td> {{r.news[8].title}}</td>  <td>{{r.news[8].id}}</td> <td>{{r.news[8].card}}</td> <td>{{r.news[8].date}}</td> <td>{{r.news[8].longURL}}</td> <td>{{r.news[8].thumbnailImage}}</td> 
+                    </tr> 
+                   <tr *ngFor= let r of newsApi>
+                     <td> {{r.news[9].title}}</td>  <td>{{r.news[9].id}}</td> <td>{{r.news[9].card}}</td> <td>{{r.news[9].date}}</td> <td>{{r.news[9].longURL}}</td> <td>{{r.news[9].thumbnailImage}}</td> 
+                   </tr>
+                    <tr *ngFor= let r of newsApi>
+                     <td> {{r.news[10].title}}</td>  <td>{{r.news[10].id}}</td> <td>{{r.news[10].card}}</td> <td>{{r.news[10].date}}</td> <td>{{r.news[10].longURL}}</td> <td>{{r.news[10].thumbnailImage}}</td> 
+                    </tr>
+                     <tr *ngFor= let r of newsApi>
+                      <td> {{r.news[11].title}}</td>  <td>{{r.news[11].id}}</td> <td>{{r.news[11].card}}</td> <td>{{r.news[11].date}}</td> <td>{{r.news[11].longURL}}</td> <td>{{r.news[11].thumbnailImage}}</td> 
+                     </tr>
+                    <tr *ngFor= let r of newsApi>
+                      <td> {{r.news[12].title}}</td>  <td>{{r.news[12].id}}</td> <td>{{r.news[12].card}}</td> <td>{{r.news[12].date}}</td> <td>{{r.news[12].longURL}}</td> <td>{{r.news[12].thumbnailImage}}</td> 
+                    </tr>
+                    <tr *ngFor= let r of newsApi>
+                      <td> {{r.news[13].title}}</td>  <td>{{r.news[13].id}}</td> <td>{{r.news[13].card}}</td> <td>{{r.news[13].date}}</td> <td>{{r.news[13].longURL}}</td> <td>{{r.news[13].thumbnailImage}}</td> 
+                    </tr>   
+                    <tr *ngFor= let r of newsApi>
+                      <td> {{r.news[14].title}}</td>  <td>{{r.news[14].id}}</td> <td>{{r.news[14].card}}</td> <td>{{r.news[14].date}}</td> <td>{{r.news[14].longURL}}</td> <td>{{r.news[14].thumbnailImage}}</td> 
+                    </tr>   
+                     <tr *ngFor= let r of newsApi>
+                       <td> {{r.news[15].title}}</td>  <td>{{r.news[15].id}}</td> <td>{{r.news[15].card}}</td> <td>{{r.news[15].date}}</td> <td>{{r.news[15].longURL}}</td> <td>{{r.news[15].thumbnailImage}}</td> 
+                     </tr> 
+                    <tr *ngFor= let r of newsApi>
+                      <td> {{r.news[16].title}}</td>  <td>{{r.news[16].id}}</td> <td>{{r.news[16].card}}</td> <td>{{r.news[16].date}}</td> <td>{{r.news[16].longURL}}</td> <td>{{r.news[16].thumbnailImage}}</td> 
+                    </tr> 
+                    <tr *ngFor= let r of newsApi>
+                     <td> {{r.news[17].title}}</td>  <td>{{r.news[17].id}}</td> <td>{{r.news[17].card}}</td> <td>{{r.news[17].date}}</td> <td>{{r.news[17].longURL}}</td> <td>{{r.news[17].thumbnailImage}}</td> 
+                    </tr> 
+                    <tr *ngFor= let r of newsApi>
+                      <td> {{r.news[18].title}}</td>  <td>{{r.news[18].id}}</td> <td>{{r.news[18].card}}</td> <td>{{r.news[18].date}}</td> <td>{{r.news[18].longURL}}</td> <td>{{r.news[18].thumbnailImage}}</td> 
+                    </tr>
+                    <tr *ngFor= let r of newsApi>
+                      <td> {{r.news[19].title}}</td>  <td>{{r.news[19].id}}</td> <td>{{r.news[19].card}}</td> <td>{{r.news[19].date}}</td> <td>{{r.news[19].longURL}}</td> <td>{{r.news[19].thumbnailImage}}</td> 
+                    </tr>   
+                   <tr *ngFor= let r of newsApi>
+                    <td> {{r.news[20].title}}</td>  <td>{{r.news[20].id}}</td> <td>{{r.news[20].card}}</td> <td>{{r.news[20].date}}</td> <td>{{r.news[20].longURL}}</td> <td>{{r.news[20].thumbnailImage}}</td> 
+                   </tr>
+                   <tr *ngFor= let r of newsApi>
+                    <td> {{r.news[21].title}}</td>  <td>{{r.news[21].id}}</td> <td>{{r.news[21].card}}</td> <td>{{r.news[21].date}}</td> <td>{{r.news[21].longURL}}</td> <td>{{r.news[21].thumbnailImage}}</td> 
+                   </tr>
+                    <tr *ngFor= let r of newsApi>
+                      <td> {{r.news[22].title}}</td>  <td>{{r.news[22].id}}</td> <td>{{r.news[22].card}}</td> <td>{{r.news[22].date}}</td> <td>{{r.news[22].longURL}}</td> <td>{{r.news[22].thumbnailImage}}</td> 
+                    </tr>
+                   <tr *ngFor= let r of newsApi>
+                     <td> {{r.news[23].title}}</td>  <td>{{r.news[23].id}}</td> <td>{{r.news[23].card}}</td> <td>{{r.news[23].date}}</td> <td>{{r.news[23].longURL}}</td> <td>{{r.news[23].thumbnailImage}}</td> 
+                   </tr> 
+                    <tr *ngFor= let r of newsApi>
+                     <td> {{r.news[24].title}}</td>  <td>{{r.news[24].id}}</td> <td>{{r.news[24].card}}</td> <td>{{r.news[24].date}}</td> <td>{{r.news[24].longURL}}</td> <td>{{r.news[24].thumbnailImage}}</td>  
+                    </tr>
+                    <tr *ngFor= let r of newsApi>
+                     <td> {{r.news[25].title}}</td> <td>{{r.news[25].id}}</td> <td>{{r.news[25].card}}</td> <td>{{r.news[25].date}}</td> <td>{{r.news[25].longURL}}</td> <td>{{r.news[25].thumbnailImage}}</td> 
+                    </tr>-->
+                 </tbody>
+            </table>
+        </div>
+    </div>  
+
+     <!-- <div class="containar" style="background-color: rgb(215, 181, 247);">
+        <h5 style="text-align: center;">  BB FINANCE API DATA </h5>
+        <h6 style="text-align: center;">  NEWS </h6>-->
+<h4> Quote API Data</h4>
+        <div class="row  justify containt center">
+          <div class="col-md-12" py-5> 
+            <table class="table table-bordered table-dark table-hover">
+              <thead>
+                <tr>
+                  <th>Card</th>
+                  <th>Country</th>
+                  <th>Currency</th>
+                  <!-- <th>Exchange</th>
+                  <th>FundamentalDataCurrency</th> -->
+                  <th>Id</th>
+                  <th>Name</th>
+                  <th>Region</th>
+                  <th>ResourceId</th>
+                  <th>ResourceSubtype</th>
+                  <th>ResourceType</th>
+                  <th>SecurityType</th>
+                  <th>Symbol</th>
+                  <th> Template</th>
+                  <th> Ticker</th>
+                  <th> TickerName</th>
+                  <th> TinyName</th>
+                  <th> Title</th>
+                  <th> Watchlist</th>
+
+                </tr> 
+
+              </thead>
+              <tbody>
+                <tr *ngFor="let data of quoteData">
+                  <td> {{data.card}} </td>
+                  <td> {{data.country}} </td>
+                  <td> {{data.currency}} </td>
+                  <!-- <td> {{data.exchange}} </td>
+                  <td> {{data.fundamentalDataCurrency}} </td> -->
+                  <td> {{data.id}} </td>
+                  <td> {{data.name}} </td>
+                  <td> {{data.region}} </td>
+                  <td> {{data.resourceId}} </td>
+                  <td> {{data.resourceSubtype}} </td>
+                  <td> {{data.resourceType}} </td>
+                  <td> {{data.securityType}} </td>
+                  <td> {{data.symbol}} </td>
+                  <td> {{data.template}} </td>
+                  <td> {{data.ticker}} </td>
+                  <td> {{data.tickerName}} </td>
+                  <td> {{data.tinyName}} </td>
+                  <td> {{data.title}} </td>
+                  <td> {{data.watchlist}} </td>
+                  <td> {{data.thumbnailImage}} </td>
+                  <td> {{data.thumbnailImage}} </td>
+                  <td> {{data.thumbnailImage}} </td>
+                  <td> {{data.thumbnailImage}} </td>
+
+              
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        <!-- </div>
+    </div>  -->
+      
