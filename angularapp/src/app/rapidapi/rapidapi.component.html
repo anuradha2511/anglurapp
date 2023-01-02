@@ -14,15 +14,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let r of newsApi">
- <td> {{r.id}}</td>
-                         <td> {{r.title}}</td>
+                     <tr *ngFor="let r of newsApi">
+                        <td> {{r.id}}</td>
+                        <td> {{r.title}}</td>
                         <td> {{r.card}}</td>
                         <td> {{r.date}}</td>
                         <td> {{r.longURL}}</td>
                         <td> {{r.thumbnailImage}}</td> 
-                    </tr>
-                    <!-- <tr *ngFor= let r of newsApi>
+                    </tr> 
+                     <!-- <tr *ngFor= let r of newsApi>
                         <td> {{r.news[0].title}}</td>  <td>{{r.news[0].id}}</td> <td>{{r.news[0].card}}</td> <td>{{r.news[0].date}}</td> <td>{{r.news[0].longURL}}</td> <td>{{r.news[0].thumbnailImage}}</td> 
                     </tr>
                     <tr *ngFor= let r of newsApi>
@@ -99,11 +99,11 @@
                     </tr>
                     <tr *ngFor= let r of newsApi>
                      <td> {{r.news[25].title}}</td> <td>{{r.news[25].id}}</td> <td>{{r.news[25].card}}</td> <td>{{r.news[25].date}}</td> <td>{{r.news[25].longURL}}</td> <td>{{r.news[25].thumbnailImage}}</td> 
-                    </tr>-->
+                    </tr> -->
                  </tbody>
             </table>
         </div>
-    </div>  
+    </div>   
 
      <!-- <div class="containar" style="background-color: rgb(215, 181, 247);">
         <h5 style="text-align: center;">  BB FINANCE API DATA </h5>
@@ -117,8 +117,6 @@
                   <th>Card</th>
                   <th>Country</th>
                   <th>Currency</th>
-                  <!-- <th>Exchange</th>
-                  <th>FundamentalDataCurrency</th> -->
                   <th>Id</th>
                   <th>Name</th>
                   <th>Region</th>
@@ -133,6 +131,8 @@
                   <th> TinyName</th>
                   <th> Title</th>
                   <th> Watchlist</th>
+                    <th>Exchange</th>
+                  <th>FundamentalDataCurrency</th>
 
                 </tr> 
 
@@ -142,8 +142,6 @@
                   <td> {{data.card}} </td>
                   <td> {{data.country}} </td>
                   <td> {{data.currency}} </td>
-                  <!-- <td> {{data.exchange}} </td>
-                  <td> {{data.fundamentalDataCurrency}} </td> -->
                   <td> {{data.id}} </td>
                   <td> {{data.name}} </td>
                   <td> {{data.region}} </td>
@@ -162,7 +160,8 @@
                   <td> {{data.thumbnailImage}} </td>
                   <td> {{data.thumbnailImage}} </td>
                   <td> {{data.thumbnailImage}} </td>
-
+                  <td> {{data.exchange}} </td>
+                  <td> {{data.fundamentalDataCurrency}} </td>
               
                 </tr>
               </tbody>
@@ -171,3 +170,5 @@
         <!-- </div>
     </div>  -->
       
+
+    <button class="btn btn-primary" (click)="CreatePost()"> Create Post </button>
