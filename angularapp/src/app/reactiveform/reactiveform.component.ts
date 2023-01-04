@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { from, interval, Observable } from 'rxjs';
 import { FireBasePost } from '../models/firebasepost';
 import { FirebaseService } from '../services/firebase.service';
+import { filter, map, take, takeLast, toArray} from 'rxjs/operators';
 
 @Component({
   selector: 'app-reactiveform',
@@ -32,10 +33,72 @@ genders = [
   }
 
   ngOnInit() {
-this._firebaseService.getPostDataFirebase().subscribe(result =>{
-  console.log('getPostDataFirebase',result);
+// * --store users array(_firebaseService) data to data--*
+    const data = from(this._firebaseService.users);
+     data.subscribe( res => {
+    console.log('example of from operator - rxjs', res);
+     })
+
+
+    //*-- Exract the value,change,or update.....is manuplate
+    //  const data = from(this._firebaseService.users);
+    //   data.pipe(
+    //  map(x => x.name + ' '+ 'Patil')
+    // ).subscribe(res =>{
+    //   console.log('res', res);
+    // })
+
+     //*--- filter operator ---*
+         const datas = from(this._firebaseService.users);
+         data.pipe(
+          filter(u => u.gender == 'Female'),
+          toArray()
+         ).subscribe(res =>{
+          console.log('Filter operator', res);
+          
+         })
+ 
+         // *--- Take operator ---*
+const sourse = interval(1000);
+sourse.pipe(
+  take(5)).subscribe( res => {
+  console.log('Interval Example', res);
+})
+
+// *--- Take Last ---*
+let randomsName = ['Anurdha', 'Codemind', 'Angular', 'HTML', 'Javascript', 'Typescript'];
+const sourses = from(randomsName);
+sourses.pipe(
+  takeLast(2)
+).subscribe(res =>{
+  console.log('Take Last operator', res);
   
 })
+
+
+// this._firebaseService.getPostDataFirebase().pipe(
+//   map( responseData => {
+//     // empty array 
+//     const postArray = [];
+//     // for in loop
+//     for(const key in responseData) {
+//       // check key available or not using hasOwnProperty
+//       if(responseData.hasOwnProperty(key)) {
+// // push new value in to array
+// postArray.push({...responseData[key], id:key})
+//       }
+//     }
+//     return postArray
+//   })
+// ).subscribe(result =>{
+//   console.log('After manipulate data', result); 
+// })
+
+
+// this._firebaseService.getPostDataFirebase().subscribe(result =>{
+//   console.log('getPostDataFirebase',result);
+// })
+
 
     // setTimeout(() => {
     //   this.myReactiveForm.setValue({
@@ -99,7 +162,7 @@ this.firebasePost.genders = this.myReactiveForm['controls'].gender.value;
 this.firebasePost.course = this.myReactiveForm['controls'].course.value;
 this.firebasePost.skills = this.myReactiveForm['controls'].skills.value;
    
-// console.log('firebase post class',this.firebasePost);
+console.log('firebase post class',this.firebasePost);
 
  this._firebaseService.createPostsDataReactiveForm(this.firebasePost).subscribe(result => {
   console.log('post from reactive form', result);

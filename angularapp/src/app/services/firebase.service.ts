@@ -10,6 +10,12 @@ export class FirebaseService {
   url = 'https://angular-crud-operations-15213-default-rtdb.firebaseio.com/';
   constructor(private _httpClient: HttpClient) { }
 
+users: any[] = [
+  {id: '101', name: 'Anuradha', gender:'Female'},
+  {id: '102', name: 'Pratiksha', gender:'Female'},
+  {id: '103', name: 'Arnav', gender: 'Male'}
+]
+
   createPost(){
     let postData = {
       title : 'This is angular 8 crud',

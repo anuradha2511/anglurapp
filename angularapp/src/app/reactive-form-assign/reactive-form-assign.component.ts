@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Registration } from '../models/registrationForm';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
   selector: 'app-reactive-form-assign',
@@ -47,7 +48,6 @@ this.user.password = this.myReactiveForm.value.password;
 this.user.pwd = this.myReactiveForm.value.pwd;
 this.register.push(this.user);
 console.log(this.myReactiveForm.value);
-
     
   }
   createForm(){
