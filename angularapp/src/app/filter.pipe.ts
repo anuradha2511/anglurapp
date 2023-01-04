@@ -1,13 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filter'
+  name: 'filter',
+  pure: true // pure:false- inpure pipe | pure: true - purepipe
 })
 export class FilterPipe implements PipeTransform {
 
   transform(val: any, searchTearm): any {
     return val.filter(function(search) {
-return search.price.toLowerCase().indexOf(searchTearm.toLowerCase()) > -1
+return search.name.toLowerCase().indexOf(searchTearm.toLowerCase()) > -1
     });
   }
 

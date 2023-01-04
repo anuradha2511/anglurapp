@@ -1,4 +1,8 @@
 <div class="row justify-content-center">
+    <div class="col-md-8">
+        <input type="text" class="from-control form-inline" placeholder="Add product" #add>
+        <button (click)="AddProduct(add)">AddProduct </button>
+    </div>
     <div class="col-md-8 form-inline mb-2">
 <label for="productid">Search by product </label>
 <input type="text" class="form-control" id="productid" placeholder="Enter product name" [(ngModel)]="namesearch">

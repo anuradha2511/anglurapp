@@ -34,11 +34,11 @@ genders = [
 
   ngOnInit() {
 // * --store users array(_firebaseService) data to data--*
-    const data = from(this._firebaseService.users);
+   // convert array into observable using from operator(rxjs) 
+const data = from(this._firebaseService.users);
      data.subscribe( res => {
     console.log('example of from operator - rxjs', res);
      })
-
 
     //*-- Exract the value,change,or update.....is manuplate
     //  const data = from(this._firebaseService.users);
@@ -48,6 +48,13 @@ genders = [
     //   console.log('res', res);
     // })
 
+    const d = from (this._firebaseService.users);
+    d.pipe(
+      map(x => x.id + " " + '00')
+    ).subscribe(res =>{
+      console.log('Example of map',res);
+      
+    })
      //*--- filter operator ---*
          const datas = from(this._firebaseService.users);
          data.pipe(

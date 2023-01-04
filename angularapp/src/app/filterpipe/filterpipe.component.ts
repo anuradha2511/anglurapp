@@ -39,4 +39,13 @@ availability: 'Available'
   ngOnInit() {
   }
 
+  AddProduct(productname){
+    alert('called success')
+this.productArr.push({
+  sno: 5,
+      name: productname.value,
+      price:'135000 Rs',
+availability: 'Available'
+})
+  }
 }
