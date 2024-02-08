@@ -58,6 +58,11 @@ import { ProductsModule } from './product/products.module';
 import { ElectricalModule } from './electricals/electrical.module';
 import { AdduserComponent } from './adduser/adduser.component';
 import { RapidapiComponent } from './rapidapi/rapidapi.component';
+import { CrudAssignComponent } from './crud-assign/crud-assign.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { AuthComponent } from './auth/auth.component';
+import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -111,6 +116,9 @@ import { RapidapiComponent } from './rapidapi/rapidapi.component';
     PostdetailsComponent,
     AdduserComponent,
     RapidapiComponent,
+    CrudAssignComponent,
+    AuthComponent,
+    LoadingSpinnerComponent,
     // ElectricalsComponent,
   
   ],
@@ -122,7 +130,8 @@ import { RapidapiComponent } from './rapidapi/rapidapi.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-  
+    BrowserAnimationsModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
